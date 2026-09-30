@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A thought leaves traces. Follow an association through memory into a speculative future artifact.">
+  <title>One Possible Future</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script src="thought-engine.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header><a class="wordmark" href="index.html">ONE POSSIBLE FUTURE<span>an exploration of what comes next</span></a><span class="edition">AN ONGOING EXPLORATION</span></header>
+  <main>
+    <div class="intro"><span class="eyebrow">A THOUGHT LEAVES TRACES.</span><h1>The future begins<br>with a thought.</h1></div>
+    <section id="thought-section" class="step">
+      <h2 class="step-label"><span>01</span> THE PRESENT</h2>
+      <form id="thought-form">
+        <label class="input-label" for="thought">What’s on your mind right now?</label>
+        <textarea id="thought" maxlength="1000" rows="2" required placeholder="I’m thinking about…" aria-describedby="input-hint input-error"></textarea>
+        <div class="form-footer"><p id="input-hint">It doesn’t need to be a plan.<br>A question, worry, memory, or passing thought is enough.</p><button class="text-link" type="submit">Follow this thought <span aria-hidden="true">→</span></button></div>
+        <p id="input-error" class="error" role="alert"></p>
+      </form>
+      <blockquote id="thought-summary" hidden></blockquote>
+      <button id="edit-thought" class="quiet" type="button" hidden>Return to this thought ↗</button>
+    </section>
+    <section id="first-step" class="step" hidden aria-labelledby="first-heading">
+      <h2 id="first-heading" class="step-label" tabindex="-1"><span>02</span> THE THOUGHT UNFOLDS</h2>
+      <p class="whisper">Stay with a thought. See what it brings to mind.</p>
+      <div id="thought-space" class="thought-space"><p id="center-thought" class="center-thought"></p><div id="first-branches"></div></div>
+      <div class="follow-row"><button id="reconsider" class="quiet" hidden type="button">Let the others return</button></div>
+    </section>
+    <section id="second-step" class="step trace" hidden aria-labelledby="second-heading">
+      <h2 id="second-heading" class="step-label" tabindex="-1"><span>03</span> — THE TRACE</h2>
+      <div class="trace-composition">
+        <ol id="trace-path" class="trace-path" aria-label="Your thought’s path"></ol>
+        <div class="trace-aside"><p class="whisper">A thought changes as it passes through memory, association, and attention.</p><button id="unfold-again" class="text-link" type="button">Let this thought unfold <span aria-hidden="true">→</span></button><button id="reveal-artifact" class="text-link" type="button">See what remains <span aria-hidden="true">→</span></button></div>
+      </div>
+    </section>
+    <section id="future-step" class="step future" hidden aria-labelledby="future-heading">
+      <h2 id="future-heading" class="step-label" tabindex="-1"><span>04</span> — A FUTURE ARTIFACT</h2>
+      <div class="artifact-stage"><span class="artifact-margin">A FRAGMENT FROM LATER</span><article id="artifact" class="artifact" aria-label="A speculative future artifact"></article><span id="artifact-coordinate" class="artifact-coordinate"></span></div>
+      <p id="future-description" class="scene-copy"></p>
+      <p class="whisper">This is not a prediction. It is a trace of where this thought could lead.</p>
+      <button id="restart" class="text-link" type="button">Trace another thought <span aria-hidden="true">→</span></button>
+    </section>
+    <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+  <footer><span>MEMORY / ASSOCIATION / ATTENTION</span><span>Every thought leaves something behind.</span></footer>
+</body>
+</html>
